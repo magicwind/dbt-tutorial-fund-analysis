@@ -1,0 +1,12 @@
+version: 2
+
+seeds:
+  - name: fund_name_em
+    config:
+      column_types: 
+        fund_code: varchar(16)
+  - name: fund_portfolio_hold_em
+    config:
+      column_types: 
+        fund_code: varchar(16)
+        stock_code: varchar(16)
