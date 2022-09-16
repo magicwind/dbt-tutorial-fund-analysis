@@ -3,10 +3,24 @@ version: 2
 seeds:
   - name: fund_name_em
     config:
-      column_types: 
+      column_types:
         fund_code: varchar(16)
   - name: fund_portfolio_hold_em
     config:
-      column_types: 
+      column_types:
         fund_code: varchar(16)
         stock_code: varchar(16)
+  - name: stock_info
+    config:
+      column_types:
+        stock_code: varchar(16)
+    columns:
+      - name: stock_code
+        description: "股票代码"
+        tests:
+          - unique
+          - not_null
+  - name: fund_portfolio_detail
+    config:
+      column_types:
+        fund_code: varchar(16)
